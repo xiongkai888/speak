@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="145dp"
+    android:layout_gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:background="#f00"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="30dp">
+
+    <com.fangdr.widget.wheel.WheelView
+        android:id="@+id/yearWheelView"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <com.fangdr.widget.wheel.WheelView
+        android:id="@+id/monthWheelView"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+    <com.fangdr.widget.wheel.WheelView
+        android:id="@+id/dayWheelView"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+</LinearLayout>

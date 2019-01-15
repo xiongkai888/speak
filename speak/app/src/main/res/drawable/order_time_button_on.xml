@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 填充颜色 -->
+    <solid android:color="@color/colorPrimaryDark"/>
+    <!-- 矩形的圆角半径 -->
+    <corners android:radius="@dimen/d_5dp"/>
+    <!-- 线的宽度、颜色 -->
+    <padding
+        android:top="@dimen/d_2dp"
+        android:bottom="@dimen/d_2dp"
+        android:left="@dimen/d_10dp"
+        android:right="@dimen/d_10dp"/>
+
+
+</shape>

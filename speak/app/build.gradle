@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.lanmei.speak"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 5
+        versionName "1.0.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "API_URL", "\"http://pay.myfreechance.com/\""
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        resConfigs "en", "zh-rCN"//(华为推送)请最少要支持en（英文） 和 zh-rCN（简体中文）两种语言
+        multiDexEnabled true
+//极光
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                PACKAGE_NAME: "com.lanmei.speak",//必填(魅族)
+                JPUSH_PKGNAME: applicationId,
+                MEIZU_APP_ID: 114899,//调试用，可不配置
+                MEIZU_APP_KEY: "f72a6ab8a6694b0198cabeffbe6c2ce5",//调试用，可不配置
+                JPUSH_APPKEY : "75e751f9d3fbef25f0097cd7", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+
+    }
+
+//      小米
+//    sourceSets {
+//        main {
+//            manifest.srcFile 'G:/speak/speak/app/src/main/AndroidManifest.xml'
+//            java.srcDirs = ['src']
+//            aidl.srcDirs = ['src']
+//            res.srcDirs = ['res']
+//            assets.srcDirs = ['assets']
+//            jni.srcDirs = ['jni']
+//            jniLibs.srcDirs = ['libs-cpufeatures', 'libs-zip']
+//        }
+//    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.startsWith('app-release')) {
+                def fileName = outputFile.name.replace("app-release", "speak_vc${defaultConfig.versionCode}_vn${defaultConfig.versionName}_${buildTime()}")
+                outputFileName = fileName
+            }
+        }
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'speak'
+            keyPassword 'lanmei888'
+            storeFile file('G:/speak/speak/speak.jks')
+            storePassword 'lanmei888'
+        }
+        release {
+            keyAlias 'speak'
+            keyPassword 'lanmei888'
+            storeFile file('G:/speak/speak/speak.jks')
+            storePassword 'lanmei888'
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'
+    }
+
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmm')
+    return formattedDate
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(path: ':common')
+    implementation project(':wheel-date-picker')
+    implementation project(':hmsagents')
+    //极光
+    implementation 'cn.jiguang.sdk:jpush:3.1.5'
+    implementation 'cn.jiguang.sdk:jcore:1.2.3'
+    //小米推送
+    implementation files('libs/MiPush_SDK_Client_3_6_9.jar')
+    //华为推送
+    implementation 'com.huawei.android.hms:push:2.6.1.301'
+    //魅族推送
+    implementation 'com.meizu.flyme.internet:push-internal:3.6.+@aar'
+    //baidu语音合成
+    implementation files('libs/com.baidu.tts_2.3.2.20180419_5a5fec8.jar')
+    //LeakCanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    //WheelPicker包括DatePicker、TimePicker、OptionPicker、AddressPicker、NumberPicker等，
+    implementation('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:1.5.6') {
+        exclude group: 'com.android.support'
+    }
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/v_all_match_parent"
+    tools:context=".ui.login.RegisterActivity">
+
+    <include layout="@layout/include_centertitletoolbar" />
+
+
+    <LinearLayout
+        style="@style/h_match_parent_no"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="@dimen/d_20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            style="@style/text"
+            android:src="@drawable/icon_pwd" />
+
+        <LinearLayout
+            style="@style/ll_bottom_h"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp">
+
+
+            <com.xson.common.widget.DrawClickableEditText
+                android:id="@+id/pwd_et"
+                style="@style/editText_bottom_style"
+                android:layout_marginRight="@dimen/d_15dp"
+                android:layout_weight="1"
+                android:hint="@string/input_password_count"
+                android:inputType="textPassword"
+                android:maxLength="18" />
+
+            <ImageView
+                android:id="@+id/showPwd_iv"
+                style="@style/text"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/pwd_off" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/h_match_parent_no"
+        android:layout_marginLeft="15dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            style="@style/text"
+            android:src="@drawable/icon_pwd" />
+
+
+        <LinearLayout
+            style="@style/ll_bottom_h"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp">
+
+
+            <com.xson.common.widget.DrawClickableEditText
+                android:id="@+id/pwd_again_et"
+                style="@style/editText_bottom_style"
+                android:layout_marginRight="@dimen/d_15dp"
+                android:layout_weight="1"
+                android:hint="@string/input_pwd_again"
+                android:inputType="textPassword"
+                android:maxLength="18" />
+
+            <ImageView
+                android:id="@+id/showPwd_again_iv"
+                style="@style/text"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/pwd_off"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sure_bt"
+        style="@style/button_style"
+        android:layout_marginTop="50dp"
+        android:text="@string/sure" />
+
+</LinearLayout>

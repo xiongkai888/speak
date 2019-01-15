@@ -1,0 +1,4 @@
+include ':app', ':common', ':wheel-date-picker',':hmsagents'
+
+project(':common').projectDir = file('../common-lib/common')
+project(':wheel-date-picker').projectDir = file('../wheel-date-picker')

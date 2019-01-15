@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        multiDexEnabled true
+//        versionCode 1
+//        versionName "1.0"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        disable 'MissingTranslation'
+        abortOnError false
+    }
+    dexOptions {
+//        preDexLibraries true
+//        javaMaxHeapSize "2g" // Use gig increments depending on needs
+        jumboMode true
+    }
+    //android-23 removed apache package, but the volley require it.
+    useLibrary 'org.apache.http.legacy' //require com.android.tools.build:gradle:1.3.1
+
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
+//    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.alibaba:fastjson:1.2.8'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.squareup.okhttp3:okhttp:3.0.0-RC1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.jakewharton:butterknife:6.0.0'
+    compile 'com.android.support:multidex:1.0.2'
+    compile('com.github.afollestad.material-dialogs:core:0.8.5.6@aar') {
+        transitive = true
+    }
+    compile project(path: ':wheel-date-picker')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+}

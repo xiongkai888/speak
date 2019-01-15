@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lanmei.speak.ui.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/d_20dp">
+
+
+        <com.xson.common.widget.CircleImageView
+            android:id="@+id/pic_iv"
+            android:layout_width="@dimen/d_80dp"
+            android:layout_height="@dimen/d_80dp"
+            android:src="@drawable/default_pic" />
+
+
+        <TextView
+            android:id="@+id/name_tv"
+            style="@style/text"
+            android:layout_marginLeft="@dimen/d_10dp"
+            android:layout_marginTop="@dimen/d_20dp"
+            android:layout_toRightOf="@id/pic_iv"
+            android:text="@string/tourist"
+            android:textSize="@dimen/txt_16sp" />
+
+        <TextView
+            android:id="@+id/id_num_tv"
+            style="@style/text"
+            android:layout_below="@id/name_tv"
+            android:layout_marginLeft="@dimen/d_10dp"
+            android:layout_marginTop="@dimen/d_3dp"
+            android:layout_toRightOf="@id/pic_iv"
+            android:text="@string/id_num" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        style="@style/h_match_parent"
+        android:layout_marginTop="@dimen/d_10dp"
+        android:paddingBottom="@dimen/d_20dp"
+        android:paddingTop="@dimen/d_20dp">
+
+
+        <TextView
+            android:id="@+id/open_voice_tv"
+            style="@style/text_weight"
+            android:drawablePadding="@dimen/d_5dp"
+            android:drawableTop="@drawable/my_07"
+            android:gravity="center_horizontal"
+            android:text="@string/open_voice" />
+
+        <TextView
+            android:id="@+id/help_tv"
+            style="@style/text_weight"
+            android:drawablePadding="@dimen/d_5dp"
+            android:drawableTop="@drawable/my_09"
+            android:gravity="center_horizontal"
+            android:text="修改密码" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/h_match_parent"
+        android:paddingBottom="@dimen/d_20dp">
+
+
+        <TextView
+            android:id="@+id/check_running_water_tv"
+            style="@style/text_weight"
+            android:drawablePadding="@dimen/d_5dp"
+            android:drawableTop="@drawable/my_13"
+            android:gravity="center_horizontal"
+            android:text="查看流水" />
+
+        <TextView
+            android:id="@+id/logout_tv"
+            style="@style/text_weight"
+            android:drawablePadding="@dimen/d_5dp"
+            android:drawableTop="@drawable/my_14"
+            android:gravity="center_horizontal"
+            android:text="退出" />
+
+    </LinearLayout>
+
+</LinearLayout>

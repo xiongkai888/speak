@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ll_bottom_h"
+    android:padding="@dimen/d_10dp">
+
+    <TextView
+        android:id="@+id/payment_type_tv"
+        style="@style/text"
+        android:layout_width="@dimen/d_60dp"
+        android:gravity="center" />
+
+
+    <LinearLayout
+        style="@style/text_weight"
+        android:layout_marginLeft="@dimen/d_10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/order_sn_tv"
+            style="@style/text14color666"
+            android:text="@string/order_sn" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            style="@style/text14color666"
+            android:text="@string/time" />
+
+        <TextView
+            android:id="@+id/arena_name_tv"
+            style="@style/text14color666"
+            android:text="@string/arena" />
+
+        <TextView
+            android:id="@+id/cashier_name_tv"
+            style="@style/text14color666"
+            android:text="@string/acshier" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/price_tv"
+        style="@style/text"
+        android:text="@string/price"
+        android:textColor="@color/red" />
+
+</LinearLayout>

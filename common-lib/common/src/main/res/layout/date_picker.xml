@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fangdr.widget.wheel.WheelDateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/wheelDateView"
+    app:wheel_background="#efefef"
+    app:wheel_foreground="#fcfcfc"
+    app:divider="@drawable/divider_vertical"
+    app:showDividers="middle"
+    app:wheel_shadow_start_color="#efefef"
+    app:wheel_shadow_middle_color="#85efefef"
+    app:wheel_shadow_end_color="#ffffffff"
+    app:item_text_color="#989898"
+    app:item_text_size="13sp"
+    app:center_item_text_color="#ff7600"
+    app:center_item_text_size="15sp"
+    app:highlight_item_text_color="#00f"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</com.fangdr.widget.wheel.WheelDateView>

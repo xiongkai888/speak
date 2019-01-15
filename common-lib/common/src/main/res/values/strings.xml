@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="refresh">刷新</string>
+    <string name="need_to_enable_read_storage_permissions">需要启用存储访问权限</string>
+    <string name="network_unconnect">网络不给力,请检查网络连接</string>
+    <string name="select_date">选择日期</string>
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/v_all_match_parent_no">
+
+    <include layout="@layout/include_centertitletoolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/d_5dp"
+        android:paddingTop="@dimen/d_5dp"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/today_tv"
+            style="@style/text"
+            android:layout_marginLeft="@dimen/d_10dp"
+            android:background="@drawable/order_time_button_on"
+            android:text="今日"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/yesterday_tv"
+            style="@style/text"
+            android:layout_marginLeft="@dimen/d_15dp"
+            android:background="@drawable/order_time_button_off"
+            android:text="昨日" />
+
+        <TextView
+            android:id="@+id/this_month_tv"
+            style="@style/text"
+            android:layout_marginLeft="@dimen/d_15dp"
+            android:background="@drawable/order_time_button_off"
+            android:text="本月" />
+
+        <TextView
+            android:id="@+id/last_month_tv"
+            style="@style/text"
+            android:layout_marginLeft="@dimen/d_15dp"
+            android:background="@drawable/order_time_button_off"
+            android:text="上月" />
+
+        <TextView
+            android:id="@+id/filtrate_tv"
+            style="@style/text"
+            android:layout_marginLeft="@dimen/d_15dp"
+            android:text="刷选" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:paddingLeft="@dimen/d_10dp"
+        style="@style/h_match_parent">
+
+
+        <TextView
+            android:id="@+id/c2_tv"
+            android:text="消费2笔及以下用户数：0个"
+            android:layout_weight="1"
+            android:layout_width="@dimen/d_0dp"
+            style="@style/text12color666" />
+
+        <TextView
+            android:id="@+id/c5_tv"
+            android:text="消费5笔及以上用户数：0个"
+            android:layout_weight="1"
+            android:layout_width="@dimen/d_0dp"
+            style="@style/text12color666" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="@dimen/d_5dp"
+        android:paddingLeft="@dimen/d_10dp"
+        android:paddingBottom="@dimen/d_5dp"
+        style="@style/ll_bottom_h">
+
+
+        <TextView
+            android:id="@+id/draw_total_tv"
+            android:text="抽奖的汇总金额：0.00元"
+            android:layout_weight="1"
+            android:layout_width="@dimen/d_0dp"
+            style="@style/text12color666" />
+
+        <TextView
+            android:id="@+id/draw_detail_tv"
+            android:text="查看抽奖商品金额明细>>"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:layout_width="@dimen/d_0dp"
+            style="@style/text12color666" />
+
+
+    </LinearLayout>
+
+
+
+
+    <com.xson.common.widget.SmartSwipeRefreshLayout
+        android:id="@+id/pull_refresh_rv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_0dp"
+        android:layout_weight="1"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@null" />
+
+
+</LinearLayout>

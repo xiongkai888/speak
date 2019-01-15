@@ -1,0 +1,157 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/txt_14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="actionMenuTextColor">@color/black</item>
+        <item name="actionMenuTextAppearance">@style/menuTextStyle</item>
+    </style>
+
+    <!--菜单-->
+    <style name="menuTextStyle" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/txt_16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--Toolbar TitleText-->
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--直线(垂直)-->
+    <style name="line_v1dp_divider">
+        <item name="android:background">@color/divider</item>
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <style name="v_all_match_parent" parent="v_all_match_parent_no">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="v_all_match_parent_no" parent="v_match_parent_no">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="v_match_parent_no" parent="match_parent">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="match_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_weight">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+    <style name="h_match_parent_no" parent="match_parent">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+
+    <style name="editText_bottom_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color2b</item>
+        <item name="android:paddingBottom">@dimen/d_10dp</item>
+        <item name="android:paddingTop">@dimen/d_10dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:background">@drawable/border_bottom_divider</item>
+        <item name="android:textColorHint">@color/color999</item>
+    </style>
+
+    <style name="text12color666" parent="Text.Size12">
+        <item name="android:textColor">@color/color666</item>
+    </style>
+
+    <style name="text14color666" parent="Text.Size14">
+        <item name="android:textColor">@color/color666</item>
+    </style>
+
+    <style name="Text.Size12" parent="text">
+        <item name="android:textSize">@dimen/txt_12sp</item>
+    </style>
+
+    <style name="Text.Size14" parent="text">
+        <item name="android:textSize">@dimen/txt_14sp</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_h</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_corners</item>
+        <item name="android:layout_marginLeft">@dimen/d_15dp</item>
+        <item name="android:layout_marginRight">@dimen/d_15dp</item>
+        <item name="android:layout_marginTop">@dimen/d_10dp</item>
+        <item name="android:layout_marginBottom">@dimen/d_10dp</item>
+    </style>
+
+
+    <!--相册底部弹框-->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
+    <!--水平直线-->
+    <style name="line_H1dp_divider" parent="line_H1dp">
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="line_H1dp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.3dp</item>
+    </style>
+
+    <!--背景白色，有底部边框-->
+    <style name="ll_bottom_h" parent="ll_bottom_h_no">
+        <item name="android:background">@drawable/border_bottom_divider</item>
+    </style>
+
+    <!--背景白色，没有底部边框-->
+    <style name="ll_bottom_h_no" parent="h_match_parent">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="h_match_parent" parent="h_match_parent_no">
+        <item name="android:background">@color/white</item>
+    </style>
+
+</resources>

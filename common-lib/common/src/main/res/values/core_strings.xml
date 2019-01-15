@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="http_parse_error">无法解析服务器返回的数据</string>
+    <string name="http_request_error">服务器无响应</string>
+    <string name="http_request_fail">网络请求失败</string>
+    <string name="http_request_timeout">网络请求超时</string>
+    <string name="identity_past">用户身份已过期,请重新登录!</string>
+    <string name="login_first">请登录</string>
+    <string name="login_please">请先登录</string>
+    <string name="empty_view_text_desc">暂无数据，赶紧推客赚佣金吧！</string>
+    <string name="no_data">暂无数据</string>
+    <string name="s_regain">s后重新获取</string>
+    <string name="obtain_code">获取验证码</string>
+
+</resources>

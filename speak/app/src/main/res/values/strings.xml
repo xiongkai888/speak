@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">免费概率</string>
+
+    <string name="input_phone_number">请输入用户名</string>
+    <string name="input_pwd">请输入密码</string>
+    <string name="input_pwd_again">请再次输入密码</string>
+    <string name="input_password_count">请输入6-18位密码</string>
+    <string name="password_inconformity">两次密码输入不一致</string>
+
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="save">保存</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="developing">开发中</string>
+    <string name="send_code_succeed">验证码发送成功</string>
+    <string name="tourist">游客</string>
+    <string name="id_num">ID号：%1$s</string>
+    <string name="huawei">huawei</string>
+    <string name="order_come">收钱包到帐：88元</string>
+    <string name="yuan_positive">+%1$s元</string>
+    <string name="yuan_burden">-%1$s元</string>
+    <string name="balance">余额：%1$s</string>
+    <string name="account_details">账户流水</string>
+    <string name="have_open_voice">语音已开启</string>
+    <string name="open_voice">开启语音</string>
+    <string name="have_close_voice">语音已关闭</string>
+    <string name="close_voice">关闭语音</string>
+    <string name="forget_pw">忘记密码？</string>
+    <string name="change_pw">修改密码</string>
+    <string name="payment_type">%1$s\n\n支付%2$s</string>
+    <string name="order_sn">订单：%1$s</string>
+    <string name="time">时间：%1$s</string>
+    <string name="arena">门店：%1$s</string>
+    <string name="acshier">收银台：%1$s</string>
+    <string name="price_sub">单价：%1$s</string>
+    <string name="num">数量：%1$s</string>
+    <string name="price">+￥%1$s</string>
+    <string name="total_price">%1$s元</string>
+    <string name="c2">消费2笔及以下用户数：%1$s个</string>
+    <string name="c5">消费5笔及以上用户数：%1$s个</string>
+    <string name="draw_total">抽奖的汇总金额：%1$s元</string>
+    <string name="filtrate">筛选</string>
+
+</resources>

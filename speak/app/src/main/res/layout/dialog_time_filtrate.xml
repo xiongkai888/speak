@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/d_10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/evaluate_tv"
+            style="@style/text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/d_20dp"
+            android:text="@string/filtrate" />
+
+        <ImageView
+            android:id="@+id/cross_iv"
+            android:src="@drawable/cross"
+            android:layout_margin="@dimen/d_10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/d_30dp"
+            android:layout_height="@dimen/d_30dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/h_match_parent_no"
+        android:layout_marginBottom="@dimen/d_10dp"
+        android:layout_marginLeft="@dimen/d_20dp"
+        android:layout_marginRight="@dimen/d_20dp"
+        android:gravity="center_vertical">
+
+
+        <Button
+            android:id="@+id/sdate_bt"
+            style="@style/text_weight"
+            android:hint="开始日期" />
+
+        <TextView
+            style="@style/text"
+            android:layout_marginLeft="@dimen/d_10dp"
+            android:layout_marginRight="@dimen/d_10dp"
+            android:text="--" />
+
+        <Button
+            android:id="@+id/edate_bt"
+            style="@style/text_weight"
+            android:hint="结束日期" />
+
+
+    </LinearLayout>
+
+    <TextView style="@style/line_H1dp_divider" />
+
+    <Button
+        android:id="@+id/sure_bt"
+        style="@style/button_style"
+        android:layout_marginTop="@dimen/d_10dp"
+        android:text="@string/sure" />
+
+</LinearLayout>

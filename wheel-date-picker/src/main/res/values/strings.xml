@@ -1,0 +1,5 @@
+<resources>
+    <string name="x_year" formatted="false">%d 年</string>
+    <string name="x_month" formatted="false">%d 月</string>
+    <string name="x_day" formatted="false">%d 日</string>
+</resources>
